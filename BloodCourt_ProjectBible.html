@@ -330,6 +330,17 @@ footer{padding:80px 0 48px;text-align:center;border-top:1px solid var(--line)}
 .tree .n.s{border-color:var(--gold-dim)}
 .tree .x{color:var(--blood);font-size:1.1rem}.tree .sp{width:14px}
 .slide .rm-like{}
+
+/* print: one slide per landscape Letter page */
+@media print{
+  @page{size:11in 8.5in;margin:0}
+  html,body{background:#0a0605!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #grain,.dtop,.dgate{display:none!important}
+  .slide{break-after:page;page-break-after:always;break-inside:avoid;min-height:8.5in;display:flex;align-items:center;border:0!important;padding:.5in 0!important;box-sizing:border-box}
+  .slide:last-child{break-after:auto;page-break-after:auto}
+  .cover{min-height:8.5in}
+  .slide__in{max-width:9.8in}
+}
 </style>
 </head>
 <body>
